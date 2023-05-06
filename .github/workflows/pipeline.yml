@@ -30,8 +30,8 @@ jobs:
           touch database/database.sqlite
       - name: Execute tests
         env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: database/database.sqlite
+          DB_CONNECTION: mysql
+          DB_DATABASE: database/database.mysql
         run: composer test-continuous-integration
       - name: php-cs-fixer
         run: composer php-cs-fixer-lint
